@@ -1,0 +1,21 @@
+def areDistinct(arr):
+    n = len(arr)
+
+    # Put all array elements in a map
+    s = set()
+    for i in range(0, n):
+        s.add(arr[i])
+
+        # If all elements are distinct,
+    # size of set should be same array.
+    return (len(s) == len(arr))
+
+
+# Driver code
+arr = list(map(int,input().split()))
+print(*arr, sep = "\n")
+if (areDistinct(arr)):
+    print("All Areas  are Distinct")
+
+else:
+    print("some Areas are Matching")
